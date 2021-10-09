@@ -1,0 +1,456 @@
+.wrapper-grid {
+    display: grid;
+    grid-template-areas:
+        " . aboutclinic-title aboutclinic-title  aboutclinic-title aboutclinic-title . "
+        " aboutclinic-picture aboutclinic-picture aboutclinic-picture aboutclinic-picture aboutclinic-picture aboutclinic-picture"
+        ". aboutclinic-information-one aboutclinic-information-one aboutclinic-information-one aboutclinic-information-one ."
+        ". aboutclinic-slogan aboutclinic-slogan aboutclinic-slogan aboutclinic-slogan ."
+        ". aboutclinic-information-two aboutclinic-information-two aboutclinic-information-two aboutclinic-information-two ."
+        ". certificates-title certificates-title certificates-title certificates-title ."
+        ". certificate-one certificate-two certificate-three certificate-four ."
+        ". certificate-five certificate-six certificate-seven certificate-eight ."
+        ". free-examination free-examination form form ."
+        ". free-examination-text free-examination-text form form ."
+        "map map map map map map"
+        ". footer footer footer footer ."
+        " copy copy copy copy copy copy ";
+    grid-template-columns: 2% repeat(4, 1fr) 2%;
+}
+
+/* aboutclinic */
+.aboutclinic-title {
+    grid-area: aboutclinic-title;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 2%;
+    color: #667771;
+    cursor: pointer;
+}
+
+.aboutclinic-title:hover {
+    text-shadow: 0px 1px rgb(167, 167, 167);
+    color: #67b795;
+}
+
+.aboutclinic-picture {
+    grid-area: aboutclinic-picture;
+    object-fit: cover;
+    width: 96%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.aboutclinic-picture-text {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #F3F3F3;
+    max-width: 1000px;
+}
+
+.aboutclinic-appointment-online {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    display: block;
+    border: 1px solid #67b795;
+    height: 50px;
+    width: 200px;
+    background-color: #67b795;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 1;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    align-self: end;
+}
+.aboutclinic-appointment-online {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffff;
+    font-size: 16px;
+}
+
+.aboutclinic-appointment-online:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 1px #485B53;
+}
+
+.aboutclinic-appointment-online:active {
+    transition-duration: 0.2s;
+    transform: scale(1.1) translate(0, 3px);
+    box-shadow: inset 0 0 3px 0.5px #485B53;
+}
+
+.aboutclinic-inf {
+    grid-area: aboutclinic-inf;
+}
+
+.aboutclinic-inf-img {
+    grid-area: aboutclinic-inf-img;
+}
+
+/* aboutclinic-slogan */
+.aboutclinic-slogan {
+    grid-area: aboutclinic-slogan;
+    background-color: #A8D8C8;
+    border-radius: 10px;
+    padding: 4%;
+    margin: 5%;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    color: #F3F3F3;
+}
+
+.aboutclinic-slogan span {
+    color: #485B53;
+    font-size: 42px;
+}
+
+/* .aboutclinic-information */
+.aboutclinic-information {
+    margin: 5%;
+    color: #667771;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.aboutclinic-information h2 {
+    text-align: center;
+}
+
+.aboutclinic-information-one {
+    grid-area: aboutclinic-information-one;
+    margin-bottom: 0;
+}
+
+.aboutclinic-information-two {
+    grid-area: aboutclinic-information-two;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* certificates */
+.certificates-title {
+    grid-area: certificates-title;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 2%;
+    color: #667771;
+}
+
+.certificate {
+    width: 100%;
+    object-fit: cover;
+    padding: 2%;
+}
+
+.certificate-one {
+    grid-area: certificate-one;
+}
+
+.certificate-two {
+    grid-area: certificate-two;
+}
+
+.certificate-three {
+    grid-area: certificate-three;
+}
+
+.certificate-four {
+    grid-area: certificate-four;
+}
+
+.certificate-five {
+    grid-area: certificate-five;
+}
+
+.certificate-six {
+    grid-area: certificate-six;
+}
+
+.certificate-seven {
+    grid-area: certificate-seven;
+}
+
+.certificate-eight {
+    grid-area: certificate-eight;
+}
+
+/* free-examination */
+.free-examination {
+    grid-area: free-examination;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    align-self: center;
+    margin-top: 10%;
+}
+
+.free-examination:hover {
+    text-shadow: 1px 1px;
+}
+
+.free-examination span {
+    color: #67B795;
+}
+
+.free-examination p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 5px 10%;
+}
+
+.form {
+    grid-area: form;
+    justify-self: center;
+    text-align: center;
+    margin: 2%;
+    z-index: 1;
+    margin-top: 10%;
+}
+.popup_content .form{
+    grid-area: none;
+    margin-top: 2%;
+}
+.form fieldset {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 5px 2px lightgray;
+    background-color: #FFFFFF;
+}
+
+.form label {
+    font-weight: 600;
+}
+
+.form-title {
+    font-size: 28px;
+    margin: 2%;
+}
+
+.form-title>span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #67B795;
+}
+
+.form input {
+    border-radius: 20px;
+    border: solid #67B795 0.5px;
+    padding: 2%;
+    margin: 2%;
+    width: 45%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.form input:focus {
+    border-radius: 20px;
+    border: solid #67B795 2.5px;
+    outline: none;
+}
+
+.form-button {
+    width: 280px;
+    height: 70px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px;
+    color: #FFFFFF;
+    background-color: #67B795;
+    border: #67B795;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 2px #485B53;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+    box-shadow: inset 0 0 6px 1px #485B53;
+    text-shadow: 0 0 2px #A8D8C8;
+
+}
+
+.form-button:active {
+    transition-duration: 0.2s;
+    transform: scale(1.1) translate(0, 3px);
+    box-shadow: inset 0 0 3px 0.5px #485B53;
+    text-shadow: none;
+}
+
+.free-examination-text {
+    grid-area: free-examination-text;
+    background-color: #A8D8C8;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+}
+
+.free-examination-text li>span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #667771;
+}
+
+.free-examination-text li {
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: left;
+}
+
+.free-examination-background {
+    grid-column: 1/7;
+    grid-row: 10/11;
+    background-color: #A8D8C8;
+}
+/* media */
+@media (max-width:1100px) {
+    .aboutclinic-title{
+        padding-top: 60px;
+    }
+    .form fieldset {
+        padding: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper-grid {
+        grid-template-areas:
+            " . aboutclinic-title  aboutclinic-title  . "
+            "  aboutclinic-picture aboutclinic-picture aboutclinic-picture aboutclinic-picture"
+            ". aboutclinic-information-one aboutclinic-information-one ."
+            ". aboutclinic-slogan aboutclinic-slogan ."
+            ". aboutclinic-information-two aboutclinic-information-two ."
+            ". certificates-title certificates-title ."
+            ". certificate-one certificate-two ."
+            ". certificate-three certificate-four ."
+            ". certificate-five certificate-six ."
+            ". certificate-seven certificate-eight ."
+            ". free-examination free-examination ."
+            ". free-examination-text free-examination-text ."
+            ".form form ."
+            " map map map map "
+            ". footer footer . "
+            "  copy copy copy copy ";
+        grid-template-columns: 2% repeat(2, 1fr) 2%;
+    }
+
+    .aboutclinic-picture-text {
+        font-size: 22px;
+        padding: 0 2%;
+    }
+
+    .free-examination-background {
+        grid-column: 1/5;
+        grid-row: 13/14;
+    }
+
+    .footer-address,
+    .footer-sm,
+    .footer-contacts {
+        font-size: 2vw;
+    }
+
+    .footer-address p:first-child,
+    .footer-sm p,
+    .footer-contacts p {
+        font-size: 2.5vw;
+    }
+
+    .footer-contacts button {
+        display: none;
+    }
+
+    .footer_logo {
+        flex: 0 0 140px;
+    }
+}
+
+@media (max-width:480px) {
+    .wrapper-grid {
+        grid-template-areas:
+            " . aboutclinic-title  aboutclinic-title  . "
+            "  aboutclinic-picture aboutclinic-picture aboutclinic-picture aboutclinic-picture"
+            ". aboutclinic-information-one aboutclinic-information-one ."
+            ". aboutclinic-slogan aboutclinic-slogan ."
+            ". aboutclinic-information-two aboutclinic-information-two ."
+            ". certificates-title certificates-title ."
+            ". certificate-one certificate-one."
+            ". certificate-two certificate-two."
+            ". certificate-three certificate-three."
+            ". certificate-four certificate-four."
+            ". certificate-five  certificate-five."
+            ". certificate-six certificate-six."
+            ". free-examination free-examination ."
+            ". free-examination-text free-examination-text ."
+            ".form form ."
+            " map map map map "
+            ". footer footer . "
+            "  copy copy copy copy ";
+    }
+    .aboutclinic-information h2,
+    .aboutclinic-title,
+    .aboutclinic-slogan,
+    .aboutclinic-slogan span,
+    .free-examination p,
+    .free-examination-text li>span{
+        font-size: 20px;
+    }
+
+    .aboutclinic-picture-text,
+    .aboutclinic-information{
+        font-size: 16px;
+    }
+    .aboutclinic-appointment-online{
+        display: none;
+    }
+    .free-examination,
+    .free-examination-text {
+        font-size: 25px;
+    }
+    .certificate-seven,
+    .certificate-eight {
+        display: none;
+    }
+
+    .free-examination-background {
+        display: none;
+    }
+
+    .footer_logo {
+        flex: 0 0 120px;
+    }
+
+    .footer-sm {
+        display: none;
+    }
+
+    .footer-address,
+    .footer-sm,
+    .footer-contacts {
+        font-size: 2.5vw;
+    }
+
+    .footer-address p:first-child,
+    .footer-sm p,
+    .footer-contacts p {
+        font-size: 3vw;
+    }
+}

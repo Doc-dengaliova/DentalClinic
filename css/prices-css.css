@@ -1,0 +1,244 @@
+.wrapper-grid {
+    display: grid;
+    grid-template-areas:
+        ". prices-title prices-title prices-title prices-title ."
+        ". prices-text prices-text prices-img prices-img ."
+        ". prices prices prices prices ."
+        "map map map map map map"
+        ". footer footer footer footer ."
+        " copy copy copy copy copy copy ";
+    grid-template-columns: 2% repeat(4, 1fr) 2%;
+}
+
+/* prices */
+.prices-title {
+    grid-area: prices-title;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-top: 2%;
+    color: #667771;
+}
+
+.prices-img {
+    grid-area: prices-img;
+    width: 40%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.prices-text {
+    grid-area: prices-text;
+    font-size: 27px;
+    text-align: center;
+    font-weight: 600;
+    margin: 2%;
+    margin-top: 15%;
+    color: #67b795;
+}
+
+.prices {
+    grid-area: prices;
+}
+
+.prices-type {
+    font-size: 25px;
+    font-weight: 700;
+    background-color: #F3F3F3;
+    border-radius: 7px;
+    padding: 2%;
+}
+
+.prices-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 2%;
+}
+
+.prices-table td {
+    padding: 1% 2%;
+}
+
+.prices-table :not(thead) tr:hover {
+    background-color: #d5e8e4;
+}
+
+.prices-table td:first-child {
+    width: 80%;
+}
+
+.prices-table span {
+    color: #999;
+}
+
+.prices-table td:last-child {
+    text-align: right;
+}
+
+.prices-table th {
+    text-align: left;
+    padding: 1% 2%;
+    border-bottom: 1px solid #67b795;
+}
+
+ /* popup */
+.form {
+    grid-area: form;
+    justify-self: center;
+    /* width: 35%; */
+    text-align: center;
+    margin: 2%;
+    z-index: 1;
+}
+
+.form fieldset {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 5px 2px lightgray;
+    background-color: #FFFFFF;
+}
+
+.form label {
+    font-weight: 600;
+}
+
+.form-title {
+    font-size: 28px;
+    margin: 2%;
+}
+
+.form-title>span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #67B795;
+}
+
+.form input {
+    border-radius: 20px;
+    border: solid #67B795 0.5px;
+    padding: 2%;
+    margin: 2%;
+    width: 45%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.form input:focus {
+    border-radius: 20px;
+    border: solid #67B795 2.5px;
+    outline: none;
+}
+
+.form-button {
+    width: 280px;
+    height: 70px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px;
+    color: #FFFFFF;
+    background-color: #67B795;
+    border: #67B795;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 2px #485B53;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+    box-shadow: inset 0 0 6px 1px #485B53;
+    text-shadow: 0 0 2px #A8D8C8;
+
+}
+
+.form-button:active {
+    transition-duration: 0.2s;
+    transform: scale(1.1) translate(0, 3px);
+    box-shadow: inset 0 0 3px 0.5px #485B53;
+    text-shadow: none;
+}
+/* media */
+@media (max-width:1100px) {
+    .prices-title{
+        padding-top: 60px;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper-grid {
+        grid-template-areas:
+            ". prices-title prices-title ."
+            ". prices-text prices-text ."
+            ". prices-img prices-img ."
+            ". prices prices ."
+            " map map map map "
+            ". footer footer . "
+            "  copy copy copy copy ";
+        grid-template-columns: 2% repeat(2, 1fr) 2%;
+    }
+    .prices-text{
+        margin-top: 2%;
+    }
+    .prices-table{
+        font-size: 17px;
+    }
+    .footer-address,
+    .footer-sm,
+    .footer-contacts {
+        font-size: 2vw;
+    }
+
+    .footer-address p:first-child,
+    .footer-sm p,
+    .footer-contacts p {
+        font-size: 2.5vw;
+    }
+
+    .footer-contacts button {
+        display: none;
+    }
+
+    .footer_logo {
+        flex: 0 0 140px;
+    }
+}
+@media (max-width:480px) {
+    .prices-title{
+        font-size: 23px;
+    }
+    .prices-text{
+        font-size: 22px;
+    }
+    .prices-type{
+        font-size: 20px;
+    }
+    .prices-table th{
+        font-size: 18px;
+    }
+    .prices-table td{
+        font-size: 16px;
+    }
+    .footer_logo {
+        flex: 0 0 120px;
+    }
+
+    .footer-sm {
+        display: none;
+    }
+
+    .footer-address,
+    .footer-sm,
+    .footer-contacts {
+        font-size: 2.5vw;
+    }
+
+    .footer-address p:first-child,
+    .footer-sm p,
+    .footer-contacts p {
+        font-size: 3vw;
+    }
+}

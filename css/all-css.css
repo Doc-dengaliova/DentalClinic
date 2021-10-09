@@ -1,0 +1,497 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    color: #667771;
+}
+body.lock{
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+/* to-top */
+.to-top {
+    display: none;
+    position: fixed;
+    right: 2%;
+    bottom: 50px;
+    z-index: 100;
+    opacity: 7;
+}
+
+.to-top a {
+    display: block;
+    color: #67b795;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.to-top a:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+    color: #A8D8C8;
+}
+.to-top a:active {
+    color: #67b795;
+}
+/* top-block */
+.top-block {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.social-icons a {
+    padding-right: 15px;
+    color: #667771;
+}
+
+.working-time {
+    margin-left: 50px;
+}
+
+.phone a {
+    font-weight: 700;
+    color: #667771;
+}
+
+.phone a:hover,
+.social-icons a:hover {
+    text-shadow: 0 1px 0;
+}
+
+button.callback {
+    border: 1px solid #67b795;
+    border-radius: 16px;
+    color: #67b795;
+    font-size: 16px;
+    padding: 5px 18px;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-left: 10px;
+    background-color: #F3F3F3;
+}
+
+button.callback:hover {
+    border: 1px solid #67b795;
+    color: #F3F3F3;
+    background-color: #67b795;
+}
+
+button.callback:active {
+    color: #ffff;
+}
+
+.phone,
+.callbackop {
+    display: inline-block;
+}
+/*  */
+
+/* header */
+.container {
+    margin: 0 2%;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F3F3F3;
+    z-index: 2;
+}
+
+.header_body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.heder_logo {
+    flex: 0 0 130px;
+    position: relative;
+    z-index: 3;
+}
+
+.heder_logo img {
+    width: 100%;
+    display: block;
+}
+
+.header_menu {
+    margin: 0 auto;
+}
+
+.header_list {
+    display: flex;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.header_list ul {
+    padding: 0;
+    margin: 0;
+}
+
+.header_list li {
+    list-style: none;
+    padding: 10px;
+}
+
+.header_link {
+    text-transform: uppercase;
+    color: #667771;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.header_link:hover {
+    color: #67b795;
+}
+
+.content {
+    padding: 180px 0 0 0;
+}
+
+li:hover>.submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+}
+
+.submenu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu a {
+    color: #667771;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 10px 25px 10px 20px;
+    display: block;
+    position: relative;
+    background-color: #d5e8e4;
+}
+
+.submenu a:hover {
+    background-color: #bbc9c7;
+    color: #F3F3F3;
+}
+
+.submenu a:hover::before {
+    content: '';
+    border: 2px solid #67b795;
+    display: inline-block;
+    height: 35px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.sub-submenu {
+    left: 175px;
+    top: 0px;
+}
+
+.appointment-online {
+    display: block;
+    border: 1px solid #67b795;
+    background-color: #67b795;
+    border-radius: 16px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    color: #ffff;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.appointment-online:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 1px #485B53;
+}
+
+.appointment-online:active {
+    transition-duration: 0.2s;
+    transform: scale(1.1) translate(0, 3px);
+    box-shadow: inset 0 0 3px 0.5px #485B53;
+}
+
+.header_burger {
+    display: none;
+}
+
+/* footer */
+.map {
+    grid-area: map;
+}
+
+.footer_logo {
+    flex: 0 0 200px;
+    position: relative;
+    z-index: 3;
+}
+
+.footer_logo img {
+    width: 100%;
+    display: block;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-address,
+.footer-sm,
+.footer-contacts {
+    margin: 2% 0;
+    text-align: center;
+}
+
+.footer-address p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.footer-address a {
+    color: #667771;
+}
+
+.footer-address a:hover {
+    color: #67b795;
+}
+
+.footer-sm a {
+    display: inline-block;
+    color: #67b795;
+    font-size: 18px;
+    border: solid #67b795 1.5px;
+    border-radius: 50%;
+    padding: 3%;
+}
+
+.footer-sm a:first-child {
+    padding: 3% 4%;
+}
+
+.footer-sm a:hover {
+    color: #FFFFFF;
+    background-color: #67b795;
+}
+
+.footer-sm p,
+.footer-contacts p {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.footer-contacts a {
+    display: block;
+    color: #667771;
+    margin-bottom: 3%;
+}
+
+.footer-contacts a:hover {
+    color: #67b795;
+}
+
+.footer-contacts button {
+    margin-left: 10%;
+}
+/* copy */
+.copy {
+    grid-area: copy;
+    background-color: #67b795;
+    padding-left: 2%;
+    color: #FFFFFF;
+}
+/* popup */
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 183, 150, 0.568);
+    top: 0;
+    left: 0;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup_content {
+    transform: perspective(600px) translate(0px, 0%);
+    opacity: 1;
+}
+
+.popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    transition: all 0.8s ease 0s;
+}
+
+.popup_content {
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%);
+}
+
+.popup_close {
+    position: absolute;
+    text-decoration: none;
+    top: -35px;
+    right: 0;
+    font-size: 35px;
+    color: #667771;
+}
+/* media */
+@media (max-width:1100px) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header {
+        position: fixed;
+    }
+
+    .header_body {
+        height: 65px;
+    }
+
+    .heder_logo {
+        flex: 0 0 90px;
+    }
+
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .header_burger span {
+        position: absolute;
+        background-color: #667771;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease;
+    }
+
+    .header_burger:before,
+    .header_burger:after {
+        content: "";
+        background-color: #667771;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .header_burger:before {
+        top: 0;
+    }
+
+    .header_burger::after {
+        bottom: 0;
+    }
+
+    .header_burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header_burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header_burger.active span {
+        transform: scale(0);
+    }
+
+    .header_menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #d5e8e4;
+        padding: 70px 0 0 0;
+        transition: all 0.3s ease;
+    }
+
+    .header_menu.active {
+        top: 0;
+    }
+
+    .header_list {
+        display: block;
+    }
+
+   .appointment-online {
+        display: none;
+    }
+
+    li:hover>.submenu {
+        display: none;
+    }
+
+    .top-block {
+        display: none;
+    }
+}
